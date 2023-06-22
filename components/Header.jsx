@@ -30,9 +30,9 @@ const Header = () => {
             <Link href="/">
                 <div className={style.logoContainer}>
                     {/* <Image src={mantleSeaLogo} height={80} width={200} alt="mantle logo" /> */}
-                    <a href="/" target={"_blank"} className="text-[32px] text-white font-serif">
+                    <div href="/" target={"_blank"} className="text-[32px] text-white font-serif">
                         TATRIX
-                    </a>
+                    </div>
                     <div className={style.logoText}></div>
                 </div>
             </Link>

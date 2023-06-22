@@ -18,10 +18,10 @@ const style = {
 }
 
 const Hero = () => {
-    const ref = useRef(null);
+    // const ref = useRef(null);
 
     useEffect(() => {
-        import("@lottiefiles/lottie-player");
+        // import("@lottiefiles/lottie-player");
     })
     return (
         <div className={style.wrapper}>
@@ -46,16 +46,14 @@ const Hero = () => {
                             src="https://media.istockphoto.com/id/1297564630/vector/game-dev-isometric-concept-education-of-creation-3d-design-of-location-or-level-computer.jpg?s=612x612&w=0&k=20&c=NuOH1Hfd3Y-DJtqwc9bafZEjrifMs47rdr4Zw1nGV3g="
                             alt=""
                         /> */}
-                        <lottie-player
+                        {/* <lottie-player
                             id="firstLottie"
-                            ref={ref}
                             autoplay
-                        
                             loop
                             mode="normal"
                             src="https://assets7.lottiefiles.com/packages/lf20_YrdJ2K8cQY.json"
                             style={{ width: "600px", height: "500px" }}
-                        ></lottie-player>
+                        ></lottie-player> */}
                         {/* <div className={style.infoContainer}>
                             <img
                                 className="h-[2.25rem] rounded-full"
