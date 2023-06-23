@@ -8,7 +8,7 @@ const style = {
     title: `relative text-white text-[46px] font-semibold mb-[2.5rem] `,
     description: `text-[#cccccc] container-[400px] text-3xl mt-[0.8rem] mb-[.5rem]`,
     ctaContainer: `flex`,
-    accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#adff01] rounded-lg mr-5 text-black hover:bg-[#2b9348] cursor-pointer`,
+    accentedButton: ` relative text-lg font-semibold px-12 text-white py-4 bg-purple-700 rounded-lg mr-5 text-black hover:bg-[#2b9348] cursor-pointer`,
     button: ` relative text-lg font-semibold px-12 py-4 bg-white rounded-lg mr-5 text-black hover:bg-[#f0f0f0] cursor-pointer`,
     cardContainer: `rounded-[3rem] before:bg-gray-500 before:opacity-5`,
     infoContainer: `h-20  p-4 rounded-b-lg flex items-center text-white`,
