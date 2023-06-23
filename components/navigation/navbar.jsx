@@ -57,16 +57,17 @@ export default function Navbar() {
                 <Link href="/streaming">
                     {/* <div className={style.headerItem}> Streaming </div> */}
                 </Link>
-                <div className={style.headerItem}> Tournament </div>
-                <div className={style.headerItem} onClick={() => { router.push('/nft') }}> Mint  NFT</div>
-                <div className={style.headerIcon} onClick={() => { router.push(`/profile/${address}`) }}>
+                <div className={style.headerItem} onClick={() => { router.push('/event') }}> Create Event</div>
+                <div className={style.headerItem} onClick={() => { router.push('/explore') }}> Explore</div>
+                <div className={style.headerItem}> Tournaments </div>
+                {/* <div className={style.headerIcon} onClick={() => { router.push(`/profile/${address}`) }}> */}
+                <div className={style.headerIcon} onClick={() => { router.push('/nft')}}>
                     <CgProfile />
                 </div>
                 <div className={style.headerIcon}>
                     <MdOutlineAccountBalanceWallet />
                 </div>
                 <div>
-
                     <Wallet />
                 </div>
             </div>

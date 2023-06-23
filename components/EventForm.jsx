@@ -8,11 +8,11 @@ const Eventform = () => {
     const [eventDescription, setEventDescription] = useState('');
     const [eventImage, setEventImage] = useState('');
     const [eventTime, setEventTime] = useState('');
+    const [success, setSuccess] = useState(false);
 
     const onFormSubmit = async (event) => {
         event.preventDefault();
-        setError(false);
-        setSuccess(false);
+        setSuccess(true);
         console.log("event", event);
     }
 
@@ -41,11 +41,11 @@ const Eventform = () => {
                 <div className="w-full pt-5 max-w-lg">
                     <form >
                         <div className=" flex flex-col text-left mb-6">
-                            <label htmlFor="text" className=" mb-2 text-lg font-medium text-white dark:text-white">Enter Event Name</label>
+                            <label htmlFor="text" className=" mb-2 text-lg font-medium text-white dark:text-white"> Event Name</label>
                             <input type="text" id="input-name" onChange={nameHandler} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="MegaRun 2 Live Stream" required />
                         </div>
                         <div className=" flex flex-col text-left mb-6">
-                            <label htmlFor="text" className=" mb-2 text-lg font-medium text-white dark:text-white">Enter Event Description</label>
+                            <label htmlFor="text" className=" mb-2 text-lg font-medium text-white dark:text-white"> Event Description</label>
                             <input type="text" id="input-name" onChange={descriptionHandler} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Write about your event details here" required />
                         </div>
 

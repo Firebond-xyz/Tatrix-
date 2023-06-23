@@ -28,12 +28,12 @@ text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl
                         </div>
                     </figure>
 
-
                     <figure className="flex flex-col items-center justify-center pt-10 ">
                         <div className="text-center align-middle w-[450px] h-[600px] p-8 bg-purple-700 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <Eventform />
                         </div>
                     </figure>
+                    
                 </div>
             </div>
         </div>
