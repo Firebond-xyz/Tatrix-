@@ -58,7 +58,7 @@ const Header = () => {
                     {/* <div className={style.headerItem}> Streaming </div> */}
                 </Link>
                 <div className={style.headerItem}> Tournament </div>
-                <div className={style.headerItem}> Mint  NFT</div>
+                <div className={style.headerItem} onClick={() => { router.push('/nft') }}> Mint  NFT</div>
                 <div className={style.headerIcon} onClick={() => { router.push(`/profile/${address}`) }}>
                     <CgProfile />
                 </div>
