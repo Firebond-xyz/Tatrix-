@@ -23,7 +23,7 @@ const explore = () => {
                 </figure>
 
                 <div>
-                    <div className=" ">
+                    <div className="align center justify-center">
                         {/* map nft data here using Event Card component to show multiple events*/}
                         <div className='flex p-10'>
                             {/* creating duplicate events */}
