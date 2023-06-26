@@ -28,11 +28,27 @@ const Tournament = () => {
     setTeamNames(event.target.value);
   };
 
+  function generateRandomTwoDigitNumber() {
+    return Math.floor(Math.random() * 90) + 10;
+  }
+
   const onFormSubmit = async (event) => {
     event.preventDefault();
     console.log("form submit..");
     try {
-      const response = await fetch("/api/route", {
+      const randomNum = generateRandomTwoDigitNumber();
+      localStorage.setItem("TournId", randomNum);
+      if (type == "undefined") return alert("type not set!");
+      console.log(
+        tournamentName,
+        gameName,
+        type,
+        numberOfTeams,
+        teamNames,
+        randomNum
+      );
+      localStorage.setItem("gameId", 0);
+      const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,9 +59,9 @@ const Tournament = () => {
           type,
           numberOfTeams,
           teamNames,
+          randomNum,
         }),
       });
-
 
       if (response.ok) {
         // Handle successful response
@@ -57,7 +73,7 @@ const Tournament = () => {
 
       const propsToSend = {
         tname: tournamentName,
-      }
+      };
 
       router.push({
         pathname: "/viewer",
@@ -69,11 +85,8 @@ const Tournament = () => {
     }
   };
 
-  
-
   return (
     <div>
-      
       <div className="flex flex-col items-center justify-center">
         <div className="w-full pt-5 max-w-lg">
           <h1 className="font-[700] text-2xl text-white flex flex-row justify-center">
@@ -123,14 +136,25 @@ const Tournament = () => {
               >
                 Enter Tournament Type
               </label>
-              <input
+              <select
+                onChange={typeHandler}
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              >
+                <option value="undefined" selected>
+                  --Select Type--
+                </option>
+                <option value="single_elimination">Single Elimination</option>
+                <option value="double_elimination">Double Elimination</option>
+                <option value="round_robin">Round Robin</option>
+              </select>
+              {/* <input
                 type="text"
                 id="input-name"
                 onChange={typeHandler}
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                 placeholder="Single Elimination, Double Elimination, Round Robin"
                 required
-              />
+              /> */}
             </div>
             <div className=" flex flex-col text-left mb-6">
               <label
@@ -173,7 +197,6 @@ const Tournament = () => {
           </form>
         </div>
       </div>
-      
     </div>
   );
 };

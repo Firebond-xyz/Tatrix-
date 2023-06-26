@@ -6,22 +6,14 @@ const manager = new BracketsManager(storage);
 
 export default async function handler(req, res) {
   try {
-    // const { tournamentName, gameName, type, numberOfTeams, teamNames } =
-    //   req.body;
+   
     const { opp1Data, opp2Data,gameIdForServer } = req.body;
-    // Create an elimination stage for tournament `3`.
-    // await manager.create({
-    //   tournamentId: 3,
-    //   name: tournamentName,
-    //   type: type,
-    //   seeding: teamNames.split(',').map((name) => name.trim()),
-    //   settings: { grandFinal: 'double' },
-    // });
+    
     const r1 = opp1Data > opp2Data ? "win" : "loss";
     const r2 = opp2Data > opp1Data ? "win" : "loss";
 
     await manager.update.match({
-      id: 1, // First match of winner bracket (round 1)
+      id: gameIdForServer, // First match of winner bracket (round 1)
       opponent1: { score: opp1Data, result: r1 },
       opponent2: { score: opp2Data, result: r2 },
     });

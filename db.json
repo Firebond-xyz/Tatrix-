@@ -8,214 +8,77 @@
         {
             "id": 1,
             "tournament_id": 3,
-            "name": "Team Sohil"
+            "name": "Team Ganesh"
         },
         {
             "id": 2,
-            "tournament_id": 3,
-            "name": "Team Dev"
-        },
-        {
-            "id": 3,
             "tournament_id": 3,
             "name": "Team Aditya"
-        }
-    ],
-    "stage": [
+        },
         {
-            "id": 0,
+            "id": 3,
             "tournament_id": 3,
-            "name": "road to win",
-            "type": "double_elimination",
-            "number": 1,
-            "settings": {
-                "grandFinal": "double",
-                "matchesChildCount": 0,
-                "size": 4,
-                "seedOrdering": [
-                    "inner_outer",
-                    "natural"
-                ]
-            }
-        }
-    ],
-    "group": [
-        {
-            "id": 0,
-            "stage_id": 0,
-            "number": 1
-        },
-        {
-            "id": 1,
-            "stage_id": 0,
-            "number": 2
-        },
-        {
-            "id": 2,
-            "stage_id": 0,
-            "number": 3
-        }
-    ],
-    "round": [
-        {
-            "id": 0,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 0
-        },
-        {
-            "id": 1,
-            "number": 2,
-            "stage_id": 0,
-            "group_id": 0
-        },
-        {
-            "id": 2,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 1
-        },
-        {
-            "id": 3,
-            "number": 2,
-            "stage_id": 0,
-            "group_id": 1
+            "name": "Team Rakesh"
         },
         {
             "id": 4,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 2
+            "tournament_id": 3,
+            "name": "team Dixit"
         },
         {
             "id": 5,
-            "number": 2,
-            "stage_id": 0,
-            "group_id": 2
-        }
-    ],
-    "match": [
-        {
-            "id": 0,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 0,
-            "round_id": 0,
-            "child_count": 0,
-            "status": 4,
-            "opponent1": {
-                "id": 0,
-                "position": 1,
-                "score": "24",
-                "result": "loss"
-            },
-            "opponent2": {
-                "id": 3,
-                "position": 4,
-                "score": "25",
-                "result": "win"
-            }
-        },
-        {
-            "id": 1,
-            "number": 2,
-            "stage_id": 0,
-            "group_id": 0,
-            "round_id": 0,
-            "child_count": 0,
-            "status": 4,
-            "opponent1": {
-                "id": 1,
-                "position": 2,
-                "score": "13",
-                "result": "loss"
-            },
-            "opponent2": {
-                "id": 2,
-                "position": 3,
-                "score": "50",
-                "result": "win"
-            }
-        },
-        {
-            "id": 2,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 0,
-            "round_id": 1,
-            "child_count": 0,
-            "status": 2,
-            "opponent1": {
-                "id": 3
-            },
-            "opponent2": {
-                "id": 2
-            }
-        },
-        {
-            "id": 3,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 1,
-            "round_id": 2,
-            "child_count": 0,
-            "status": 2,
-            "opponent1": {
-                "id": 0,
-                "position": 1
-            },
-            "opponent2": {
-                "id": 1,
-                "position": 2
-            }
-        },
-        {
-            "id": 4,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 1,
-            "round_id": 3,
-            "child_count": 0,
-            "status": 0,
-            "opponent1": {
-                "id": null,
-                "position": 1
-            },
-            "opponent2": {
-                "id": null
-            }
-        },
-        {
-            "id": 5,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 2,
-            "round_id": 4,
-            "child_count": 0,
-            "status": 0,
-            "opponent1": {
-                "id": null
-            },
-            "opponent2": {
-                "id": null,
-                "position": 1
-            }
+            "tournament_id": 3,
+            "name": "Team Patil"
         },
         {
             "id": 6,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 2,
-            "round_id": 5,
-            "child_count": 0,
-            "status": 0,
-            "opponent1": {
-                "id": null
-            },
-            "opponent2": {
-                "id": null
-            }
+            "tournament_id": 3,
+            "name": "team adi"
+        },
+        {
+            "id": 7,
+            "tournament_id": 11,
+            "name": "team dixit"
+        },
+        {
+            "id": 8,
+            "tournament_id": 11,
+            "name": "team dev"
+        },
+        {
+            "id": 9,
+            "tournament_id": 11,
+            "name": "team sohil"
+        },
+        {
+            "id": 10,
+            "tournament_id": 11,
+            "name": "team adi"
+        },
+        {
+            "id": 11,
+            "tournament_id": 65,
+            "name": "team dixit"
+        },
+        {
+            "id": 12,
+            "tournament_id": 65,
+            "name": "team rajesh"
+        },
+        {
+            "id": 13,
+            "tournament_id": 65,
+            "name": "team sohil"
+        },
+        {
+            "id": 14,
+            "tournament_id": 65,
+            "name": "team tiwari"
         }
     ],
+    "stage": [],
+    "group": [],
+    "round": [],
+    "match": [],
     "match_game": []
 }
