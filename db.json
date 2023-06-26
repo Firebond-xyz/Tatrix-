@@ -1,0 +1,84 @@
+{
+    "participant": [
+        {
+            "id": 0,
+            "tournament_id": 3,
+            "name": "Team Dixit"
+        },
+        {
+            "id": 1,
+            "tournament_id": 3,
+            "name": "Team Ganesh"
+        },
+        {
+            "id": 2,
+            "tournament_id": 3,
+            "name": "Team Aditya"
+        },
+        {
+            "id": 3,
+            "tournament_id": 3,
+            "name": "Team Rakesh"
+        },
+        {
+            "id": 4,
+            "tournament_id": 3,
+            "name": "team Dixit"
+        },
+        {
+            "id": 5,
+            "tournament_id": 3,
+            "name": "Team Patil"
+        },
+        {
+            "id": 6,
+            "tournament_id": 3,
+            "name": "team adi"
+        },
+        {
+            "id": 7,
+            "tournament_id": 11,
+            "name": "team dixit"
+        },
+        {
+            "id": 8,
+            "tournament_id": 11,
+            "name": "team dev"
+        },
+        {
+            "id": 9,
+            "tournament_id": 11,
+            "name": "team sohil"
+        },
+        {
+            "id": 10,
+            "tournament_id": 11,
+            "name": "team adi"
+        },
+        {
+            "id": 11,
+            "tournament_id": 65,
+            "name": "team dixit"
+        },
+        {
+            "id": 12,
+            "tournament_id": 65,
+            "name": "team rajesh"
+        },
+        {
+            "id": 13,
+            "tournament_id": 65,
+            "name": "team sohil"
+        },
+        {
+            "id": 14,
+            "tournament_id": 65,
+            "name": "team tiwari"
+        }
+    ],
+    "stage": [],
+    "group": [],
+    "round": [],
+    "match": [],
+    "match_game": []
+}
