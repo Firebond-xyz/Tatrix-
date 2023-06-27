@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import Eventform from '../components/Eventform';
-
+import { useCreateStream } from '@livepeer/react';
 
 export default function Event() {
     return (
