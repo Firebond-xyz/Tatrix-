@@ -5,15 +5,10 @@ import {
   LivepeerConfig,
   ThemeConfig,
   createReactClient,
-  studioProvider,
 } from '@livepeer/react';
 import * as React from 'react';
+import LivepeerClient from "../client";
 
-const livepeerClient = createReactClient({
-  provider: studioProvider({
-    apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY,
-  }),
-});
 
 const theme = {
   colors: {
@@ -31,7 +26,7 @@ function MyApp({ Component, pageProps }) {
   // console.log("NEXT_PUBLIC_STUDIO_API_KEY:", process.env.NEXT_PUBLIC_STUDIO_API_KEY)
 
   return (
-    <LivepeerConfig client={livepeerClient} theme={theme}>
+    <LivepeerConfig client={LivepeerClient} theme={theme}>
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>

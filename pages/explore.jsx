@@ -15,7 +15,7 @@ const explore = () => {
                         <p className='text-white text-lg font-bold pb-5'>
                             Explore all the Gaming Events here
                         </p>
-                        <Link href="/explore" className="inline-flex justify-center align-middle items-center p-5 text-lg font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
+                        <Link href="/livestreams" className="inline-flex justify-center align-middle items-center p-5 text-lg font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
                             Join Current Live Event
                             <BsFillArrowRightCircleFill className="ml-3" />
                         </Link>

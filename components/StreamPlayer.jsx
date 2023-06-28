@@ -19,12 +19,12 @@ const PosterImage = () => {
     );
 };
 
-const StreamPlayer = () => {
-    console.log("playbackId", playbackId,"id" )
+const StreamPlayer = (props) => {
+    console.log(props.id)
     return (
         <Player
             title="Waterfalls"
-            playbackId={playbackId}
+            playbackId={props.id}
             showPipButton
             showTitle={false}
             aspectRatio="16to9"
