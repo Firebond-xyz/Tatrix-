@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Link from 'next/link';
 
 const style = {
     wrapper: `relative`,
@@ -36,8 +37,12 @@ const Hero = () => {
                         </div>
 
                         <div className={style.ctaContainer}>
-                            <button className={style.accentedButton}>Explore</button>
-                            <button className={style.button}>Stream</button>
+                            <Link href="/explore">
+                                <button className={style.accentedButton} >Explore</button>
+                            </Link>
+                            <Link href="/nft">
+                                <button className={style.button}>Create Stream</button>
+                            </Link>
                         </div>
                     </div>
                     <div className={style.cardContainer}>
