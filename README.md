@@ -27,9 +27,9 @@ Tatrix's vision is to create an immersive, impartial and inclusive ecosystem for
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-The growth of the gaming community has heightened the need for solutions to these challenges. To address this, Maverick was conceived as a platform that combines the best aspects of entertainment, skill and decentralized finance (DeFi), bringing together gamers, GameFi projects, and guilds through streaming.
+The growth of the gaming community has heightened the need for solutions to these challenges. To address this, Tatrix was conceived as a platform that combines the best aspects of entertainment, skill and decentralized finance (DeFi), bringing together gamers, GameFi projects, and guilds through streaming.
 
-Maverick is a web3 Game Streaming and Community Tournament Platform that fosters a dynamic and sustainable economy for games and players. An innovative blockchain initiative that addresses the challenges faced by the GameFi sector by introducing a game live streaming platform with gated experiences, and seamless community tournament organization.
+ Tatrix is a web3 Game Streaming and Community Tournament Platform that fosters a dynamic and sustainable economy for games and players. An innovative blockchain initiative that addresses the challenges faced by the GameFi sector by introducing a game live streaming platform with gated experiences, and seamless community tournament organization.
 
 
 
