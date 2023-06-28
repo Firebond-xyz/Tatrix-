@@ -31,7 +31,7 @@ const StreamDashboard = () => {
         <h2>
           Stream Key: <span>{getStreamInfo.streamKey}</span>{" "}
         </h2>
-        <h2>Stream Status: <span>{getStreamInfo.isActive.toString() == "false" ? "Inactive" : "Active"}</span></h2>
+        <h2>Stream Status: <span>{getStreamInfo.isActive == false ? "Inactive" : "Active"}</span></h2>
         <h2>Playback ID: <span>{getStreamInfo.playbackId}</span></h2>
       </div>
       <div className="bg-white border-white h-[30%] w-[40%] mr-10">

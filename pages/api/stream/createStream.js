@@ -11,6 +11,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         name: name,
         profiles: profiles,
+        record: true,
       }),
     });
 
