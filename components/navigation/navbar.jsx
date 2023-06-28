@@ -85,6 +85,7 @@ export default function Navbar() {
         >
           Explore
         </div>
+        <div className={style.headerItem} onClick={() => { router.push('/CreateAndViewAsset') }}> Video NFT</div>
         <div
           className={style.headerItem}
           onClick={() => {
