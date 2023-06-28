@@ -74,11 +74,69 @@
             "id": 14,
             "tournament_id": 65,
             "name": "team tiwari"
+        },
+        {
+            "id": 15,
+            "tournament_id": 62,
+            "name": "V"
+        },
+        {
+            "id": 16,
+            "tournament_id": 62,
+            "name": "X"
         }
     ],
-    "stage": [],
-    "group": [],
-    "round": [],
-    "match": [],
+    "stage": [
+        {
+            "id": 0,
+            "tournament_id": 62,
+            "name": "Race",
+            "type": "single_elimination",
+            "number": 1,
+            "settings": {
+                "grandFinal": "double",
+                "consolationFinal": false,
+                "matchesChildCount": 0,
+                "size": 2,
+                "seedOrdering": [
+                    "inner_outer"
+                ]
+            }
+        }
+    ],
+    "group": [
+        {
+            "id": 0,
+            "stage_id": 0,
+            "number": 1
+        }
+    ],
+    "round": [
+        {
+            "id": 0,
+            "number": 1,
+            "stage_id": 0,
+            "group_id": 0
+        }
+    ],
+    "match": [
+        {
+            "id": 0,
+            "number": 1,
+            "stage_id": 0,
+            "group_id": 0,
+            "round_id": 0,
+            "child_count": 0,
+            "status": 2,
+            "opponent1": {
+                "id": 15,
+                "position": 1
+            },
+            "opponent2": {
+                "id": 16,
+                "position": 2
+            }
+        }
+    ],
     "match_game": []
 }
