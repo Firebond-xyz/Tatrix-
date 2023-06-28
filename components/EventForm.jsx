@@ -38,6 +38,7 @@ const Eventform = () => {
 
   const Submit = async (event) => {
     event.preventDefault();
+    
     try {
       console.log(eventName);
       const response = await fetch("/api/stream/createStream", {
