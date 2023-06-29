@@ -1,9 +1,18 @@
-import { Player, useAssetMetrics, useCreateAsset } from '@livepeer/react';
-import { useCallback, useMemo, useState } from 'react';
-import { useDropzone } from 'react-dropzone';
+import { Player, useAssetMetrics, useCreateAsset } from "@livepeer/react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { Types } from "aptos";
+import {
+  CreateAptosTokenBody,
+  CreateAptosTokenResponse,
+} from "../pages/api/create-aptos-nft";
+import { AptosContext } from "../pages/_app";
+import { useDropzone } from "react-dropzone";
 
 const Asset = () => {
   const [video, setVideo] = useState(undefined);
+  const [address, setAddress] = useState("");
+  const [creatingNFT, setIsCreatingNft] = useState(false);
+  const aptosClient = useContext(AptosContext);
   const {
     mutate: createAsset,
     data: asset,
@@ -13,7 +22,19 @@ const Asset = () => {
   } = useCreateAsset(
     video
       ? {
-          sources: [{ name: video.name, file: video }],
+          sources: [
+            {
+              name: video.name,
+              file: video,
+              storage: {
+                ipfs: true,
+                metadata: {
+                  name: video.name,
+                  description: "description",
+                },
+              },
+            },
+          ],
         }
       : null
   );
@@ -22,6 +43,7 @@ const Asset = () => {
     refetchInterval: 30000,
   });
 
+  //adding video files
   const onDrop = useCallback(async (acceptedFiles) => {
     if (acceptedFiles && acceptedFiles.length > 0 && acceptedFiles?.[0]) {
       setVideo(acceptedFiles[0]);
@@ -30,7 +52,7 @@ const Asset = () => {
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
-      'video/*': ['*.mp4'],
+      "video/*": ["*.mp4"],
     },
     maxFiles: 1,
     onDrop,
@@ -38,24 +60,97 @@ const Asset = () => {
 
   const isLoading = useMemo(
     () =>
-      status === 'loading' ||
-      (asset?.[0] && asset[0].status?.phase !== 'ready'),
+      status === "loading" ||
+      (asset?.[0] && asset[0].status?.phase !== "ready"),
     [status, asset]
   );
 
   const progressFormatted = useMemo(() => {
-    if (progress?.[0]?.phase === 'failed') {
-      return 'Failed to process video.';
-    } else if (progress?.[0]?.phase === 'waiting') {
-      return 'Waiting...';
-    } else if (progress?.[0]?.phase === 'uploading') {
+    if (progress?.[0]?.phase === "failed") {
+      return "Failed to process video.";
+    } else if (progress?.[0]?.phase === "waiting") {
+      return "Waiting...";
+    } else if (progress?.[0]?.phase === "uploading") {
       return `Uploading: ${Math.round(progress?.[0]?.progress * 100)}%`;
-    } else if (progress?.[0]?.phase === 'processing') {
+    } else if (progress?.[0]?.phase === "processing") {
       return `Processing: ${Math.round(progress?.[0].progress * 100)}%`;
     } else {
       return null;
     }
   }, [progress]);
+  if (asset) {
+    console.log(asset[0]);
+  }
+
+  useEffect(() => {
+    console.log(window.aptos);
+    // setAddress(account.address);
+  }, []);
+
+  const mintNft = useCallback(async () => {
+    setIsCreatingNft(true);
+    const account = await window.aptos.account();
+    setAddress(account.address);
+    console.log(aptosClient);
+    console.log(address);
+    console.log(asset[0].storage.ipfs.nftMetadata.url);
+    try {
+      if (address && aptosClient) {
+        const body = {
+          receiver: address,
+          metadataUri: asset[0].storage.ipfs.nftMetadata.url,
+        };
+
+        const response = await fetch("/api/create-aptos-nft", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        });
+
+        const json = await response.json();
+
+        if (json.tokenName) {
+          const createResponse = json;
+
+          const transaction = {
+            type: "entry_function_payload",
+            function: "0x3::token_transfers::claim_script",
+            arguments: [
+              createResponse.creator,
+              createResponse.creator,
+              createResponse.collectionName,
+              createResponse.tokenName,
+              createResponse.tokenPropertyVersion,
+            ],
+            type_arguments: [],
+          };
+
+          const aptosResponse = await window.aptos.signAndSubmitTransaction(
+            transaction
+          );
+
+          const result = await aptosClient.waitForTransactionWithResult(
+            aptosResponse.hash,
+            { checkSuccess: true }
+          );
+
+          setCreationHash(result.hash);
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      console.log("error");
+      setIsCreatingNft(false);
+    }
+  }, [
+    address,
+    aptosClient,
+    asset?.storage?.ipfs?.nftMetadata?.url,
+    setIsCreatingNft,
+  ]);
 
   return (
     <div className="container">
@@ -83,15 +178,24 @@ const Asset = () => {
           {progressFormatted && <p>{progressFormatted}</p>}
 
           {!asset?.[0].id && (
-            <button
-              onClick={() => {
-                createAsset?.();
-              }}
-              disabled={isLoading || !createAsset}
-              className="upload-button"
-            >
-              Upload
-            </button>
+            <div>
+              <button
+                onClick={() => {
+                  createAsset?.();
+                }}
+                disabled={isLoading || !createAsset}
+                className="upload-button"
+              >
+                Upload
+              </button>
+            </div>
+          )}
+          {asset?.[0].id && (
+            <div>
+              <button onClick={mintNft} className="upload-button">
+                Mint
+              </button>
+            </div>
           )}
         </div>
       </div>
