@@ -1,177 +1,227 @@
 import React from "react";
 import Link from "next/link";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { BiHeart } from "react-icons/bi";
 
 const explore = () => {
   return (
-    <div className="h-screen bg-black">
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-gray-900 to-black">
-        <figure className="flex flex-col items-center justify-center pt-10 ">
-          <div className="text-center pb-10 align-middle min-w-[1100px] h-[300px] p-8 bg-purple-700 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="min-h-screen bg-black">
+      <figure className="flex flex-col items-center justify-center pt-10 pb-10 ">
+        <div className="rounded-xl bg-[url('https://shikhar.xyz/wp-content/uploads/2023/06/eventPage.png')] before:bg-center before:opacity-0 ">
+          <div className="text-left pb-10 align-middle min-w-[1100px] h-[300px] pl-10 p-5 dark:bg-gray-800 dark:border-gray-700">
             <div
-              className="md:mt-4 md:mb-8 mb-6 md:pb-2 bg-gradient-to-r from-[#fff] via-[#fff]/80 to-[#9d9ea1]/50 bg-clip-text 
-                                text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl text-center text-[22px] max-w-[575px]"
+              className=" text-white font-bold font-Agda text-[80px] uppercase max-w-[575px]"
             >
-              Explore
+              Explore Event
             </div>
-            <p className="text-white text-lg font-bold pb-5">
-              Explore all the Gaming Events here
+            <p className="text-white font-Outfit font-light pb-9">
+              Your Favorite Game Streaming Events are here
             </p>
             <Link
               href="/livestreams"
-              className="inline-flex justify-center align-middle items-center p-5 text-lg font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Join Current Live Event
-              <BsFillArrowRightCircleFill className="ml-3" />
+              className="inline-flex align-left items-center relative text-lg px-8 py-3 bg-white  mr-5 uppercase font-Agda font-bold text-b hover:bg-[#f0f0f0] cursor-pointer" >
+              Join Live Event
+              <BsArrowRight className=' ml-2' />
             </Link>
           </div>
-        </figure>
+        </div>
+      </figure>
 
-        <div>
-          <div className="flex flex-col justify-center items-center content-center ">
-            {/* map nft data here using Event Card component to show multiple events*/}
-            <div className="flex flex-row p-10">
-              {/* creating duplicate events */}
-              <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    src="/images/AptosTrends.png"
-                    alt="Gaming Trends on Aptos"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">Gaming Trends on Aptos</h2>
-                  <div className="flex">
-                    <p>Check out Gaming trends on Aptos - 2023</p>
-                    <div className="justify-end">
-                      <BiHeart />
-                    </div>
-                  </div>
-                  <div className="card-actions justify-end">
-                    {/* <button className="btn btn-primary">Buy Now</button> */}
+      <div>
+        <div className="flex flex-col justify-center items-center content-center ">
+          {/* map nft data here using Event Card component to show multiple events*/}
+          <div className="flex flex-row p-10">
+            {/* creating duplicate events */}
+            <div className="card card-compact mx-5 w-[400px] bg-[#202020] p-4 text-white shadow-xl">
+              <figure>
+                <img
+                  src="/images/AptosTrends.png"
+                  alt="Gaming Trends on Aptos"
+                  cover
+                />
+              </figure>
+              <div className="card-body">
+                <div className="flex">
+                  <div className="font-Agda text-[18px] uppercase text-[#98ee2c]"> Sept 02</div>
+                  <div className="font-Agda text-[18px] uppercase px-2"> Starting At 6:00PM</div>
+                  <div className="text-end justify-end">
+                    <BiHeart />
                   </div>
                 </div>
-              </div>
-              <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure className="pt-4">
-                  <img
-                    src="/images/howtoplayumi.jpeg"
-                    alt="Umi's Friends Stream"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Tutorial: How to play Umi's friends and setup account
-                  </h2>
-                  <div className="flex">
-                    <p>
-                      Find out how to create an account in-game and tips for
-                      beginners,
-                    </p>
-                    <div className="justify-end">
-                      <BiHeart />
-                    </div>
-                  </div>
-                  <div className="card-actions justify-end">
-                    {/* <button className="btn btn-primary">Buy Now</button> */}
-                  </div>
+                <h2 className="card-title font-Montserrat text-[24px] pb-4">Gaming Trends on Aptos</h2>
+                <div className="flex ">
+                  <button
+                    className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                    Watch Live
+                    <BsArrowRight className='mt-1 ml-2' />
+                  </button>
                 </div>
-              </div>
-              <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure>
-                  <img src="/images/Cyberpet.png" alt="CyberPet" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Update: CyberPet introduces new skins and much
-                    more!
-                  </h2>
-                  <div className="flex">
-                    <p>In the Latest update, CyberPet announces major changes in
-                      the game that you do not want to miss!</p>
-                    <div className="justify-end">
-                      <BiHeart />
-                    </div>
-                  </div>
-                  <div className="card-actions justify-end">
-                    {/* <button className="btn btn-primary">Buy Now</button> */}
-                  </div>
-                </div>
+                {/* <div className="card-actions justify-end bg-[url('../public/images/hero.png')] "> */}
+                {/* <button className="btn btn-primary">Buy Now</button> */}
+                {/* </div> */}
               </div>
             </div>
-            <div className="flex flex-row p-10">
-              {/* creating duplicate events */}
-              <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    src="/images/AptosTrends.png"
-                    alt="Gaming Trends on Aptos"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">Gaming Trends on Aptos</h2>
-                  <div className="flex">
-                    <p>Check out Gaming trends on Aptos - 2023</p>
-                    <div className="justify-end">
-                      <BiHeart />
-                    </div>
-                  </div>
-                  <div className="card-actions justify-end">
-                    {/* <button className="btn btn-primary">Buy Now</button> */}
+
+            <div className="card card-compact mx-5 w-[400px] bg-[#202020] p-4 text-white shadow-xl">
+              <figure>
+                <img
+                  src="/images/howtoplayumi.jpeg"
+                  alt="Umi's Friends Stream"
+                  cover
+                />
+              </figure>
+              <div className="card-body">
+                <div className="flex">
+                  <div className="font-Agda text-[18px] uppercase text-[#98ee2c]"> Aug 20</div>
+                  <div className="font-Agda text-[18px] uppercase px-2"> Starting At 6:00PM</div>
+                  <div className="text-end justify-end">
+                    <BiHeart />
                   </div>
                 </div>
-              </div>
-              <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure className="pt-4">
-                  <img
-                    src="/images/howtoplayumi.jpeg"
-                    alt="Umi's Friends Stream"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Tutorial: How to play Umi's friends and setup account
-                  </h2>
-                  <div className="flex">
-                    <p>
-                      Find out how to create an account in-game and tips for
-                      beginners,
-                    </p>
-                    <div className="justify-end">
-                      <BiHeart />
-                    </div>
-                  </div>
-                  <div className="card-actions justify-end">
-                    {/* <button className="btn btn-primary">Buy Now</button> */}
-                  </div>
+                <h2 className="card-title font-Montserrat text-[24px] pb-4">Tutorial: How to play Umi's friends and setup account
+                </h2>
+                <div className="flex ">
+                  <button
+                    className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                    Watch Live
+                    <BsArrowRight className='mt-1 ml-2' />
+                  </button>
                 </div>
-              </div>
-              <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure>
-                  <img src="/images/Cyberpet.png" alt="CyberPet" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">
-                    Update: CyberPet introduces new skins and much
-                    more!
-                  </h2>
-                  <div className="flex">
-                    <p>
-                      In the Latest update, CyberPet announces major changes in
-                      the game that you do not want to miss!
-                    </p>
-                    <div className="justify-end">
-                      <BiHeart />
-                    </div>
-                  </div>
-                  <div className="card-actions justify-end">
-                    {/* <button className="btn btn-primary">Buy Now</button> */}
-                  </div>
-                </div>
+                {/* <div className="card-actions justify-end bg-[url('../public/images/hero.png')] "> */}
+                {/* <button className="btn btn-primary">Buy Now</button> */}
+                {/* </div> */}
               </div>
             </div>
+
+            <div className="card card-compact mx-5 w-[400px] bg-[#202020] p-4 text-white shadow-xl">
+              <figure>
+                <img
+                  src="/images/Cyberpet.png"
+                  alt="CyberPet"
+                  cover
+                />
+              </figure>
+              <div className="card-body">
+                <div className="flex">
+                  <div className="font-Agda text-[18px] uppercase text-[#98ee2c]"> Sept 04</div>
+                  <div className="font-Agda text-[18px] uppercase px-2"> Starting At 6:00PM</div>
+                  <div className="text-end justify-end">
+                    <BiHeart />
+                  </div>
+                </div>
+                <h2 className="card-title font-Montserrat text-[24px] pb-4"> Update: CyberPet introduces new skins and muchmore!
+                </h2>
+                <div className="flex ">
+                  <button
+                    className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                    Watch Live
+                    <BsArrowRight className='mt-1 ml-2' />
+                  </button>
+                </div>
+                {/* <div className="card-actions justify-end bg-[url('../public/images/hero.png')] "> */}
+                {/* <button className="btn btn-primary">Buy Now</button> */}
+                {/* </div> */}
+              </div>
+            </div>
+
           </div>
+          <div className="flex flex-row p-10">
+            {/* creating duplicate events */}
+            <div className="card card-compact mx-5 w-[400px] bg-[#202020] p-4 text-white shadow-xl">
+              <figure>
+                <img
+                  src="/images/AptosTrends.png"
+                  alt="Gaming Trends on Aptos"
+                  cover
+                />
+              </figure>
+              <div className="card-body">
+                <div className="flex">
+                  <div className="font-Agda text-[18px] uppercase text-[#98ee2c]"> Sept 02</div>
+                  <div className="font-Agda text-[18px] uppercase px-2"> Starting At 6:00PM</div>
+                  <div className="text-end justify-end">
+                    <BiHeart />
+                  </div>
+                </div>
+                <h2 className="card-title font-Montserrat text-[24px] pb-4">Gaming Trends on Aptos</h2>
+                <div className="flex ">
+                  <button
+                    className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                    Watch Live
+                    <BsArrowRight className='mt-1 ml-2' />
+                  </button>
+                </div>
+                {/* <div className="card-actions justify-end bg-[url('../public/images/hero.png')] "> */}
+                {/* <button className="btn btn-primary">Buy Now</button> */}
+                {/* </div> */}
+              </div>
+            </div>
+
+            <div className="card card-compact mx-5 w-[400px] bg-[#202020] p-4 text-white shadow-xl">
+              <figure>
+                <img
+                  src="/images/howtoplayumi.jpeg"
+                  alt="Umi's Friends Stream"
+                  cover
+                />
+              </figure>
+              <div className="card-body">
+                <div className="flex">
+                  <div className="font-Agda text-[18px] uppercase text-[#98ee2c]"> Aug 20</div>
+                  <div className="font-Agda text-[18px] uppercase px-2"> Starting At 6:00PM</div>
+                  <div className="text-end justify-end">
+                    <BiHeart />
+                  </div>
+                </div>
+                <h2 className="card-title font-Montserrat text-[24px] pb-4">Tutorial: How to play Umi's friends and setup account
+                </h2>
+                <div className="flex ">
+                  <button
+                    className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                    Watch Live
+                    <BsArrowRight className='mt-1 ml-2' />
+                  </button>
+                </div>
+                {/* <div className="card-actions justify-end bg-[url('../public/images/hero.png')] "> */}
+                {/* <button className="btn btn-primary">Buy Now</button> */}
+                {/* </div> */}
+              </div>
+            </div>
+
+            <div className="card card-compact mx-5 w-[400px] bg-[#202020] p-4 text-white shadow-xl">
+              <figure>
+                <img
+                  src="/images/Cyberpet.png"
+                  alt="CyberPet"
+                  cover
+                />
+              </figure>
+              <div className="card-body">
+                <div className="flex">
+                  <div className="font-Agda text-[18px] uppercase text-[#98ee2c]"> Sept 04</div>
+                  <div className="font-Agda text-[18px] uppercase px-2"> Starting At 6:00PM</div>
+                  <div className="text-end justify-end">
+                    <BiHeart />
+                  </div>
+                </div>
+                <h2 className="card-title font-Montserrat text-[24px] pb-4"> Update: CyberPet introduces new skins and muchmore!
+                </h2>
+                <div className="flex ">
+                  <button
+                    className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                    Watch Live
+                    <BsArrowRight className='mt-1 ml-2' />
+                  </button>
+                </div>
+                {/* <div className="card-actions justify-end bg-[url('../public/images/hero.png')] "> */}
+                {/* <button className="btn btn-primary">Buy Now</button> */}
+                {/* </div> */}
+              </div>
+            </div>
+
+          </div>
+
+
         </div>
       </div>
     </div>

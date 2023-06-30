@@ -13,7 +13,6 @@ const Tournament = () => {
 
   // useEffect(() => {
   //   async function delete() {
-
   //     try {
   //       const tournamentId = localStorage.getItem("TournId");
   //       console.log(tournamentId);

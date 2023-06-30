@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const style = {
   wrapper: `relative`,
-  container: `before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('../public/images/hero.png')] before:bg-center before:opacity-100 `,
+  container: `before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://shikhar.xyz/wp-content/uploads/2023/06/hero.png')] before:bg-center before:opacity-100 `,
   contentWrapper: `h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `p-10 pl-[100px] pt-[100px] w-3/5`,
   title: `relative text-white uppercase text-[80px] font-Agda font-semibold mb-[2.5rem] `,
