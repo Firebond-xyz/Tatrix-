@@ -10,7 +10,6 @@ const BracketView = () => {
       window.bracketsViewer.render({
         stages: data.stage,
         matches: data.match,
-        matchGames: data.match_game,
         groups: data.group,
         participants: data.participant,
       });

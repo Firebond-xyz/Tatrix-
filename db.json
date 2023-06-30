@@ -2,199 +2,28 @@
     "participant": [
         {
             "id": 0,
-            "tournament_id": 3,
-            "name": "Team Dixit"
-        },
-        {
-            "id": 1,
-            "tournament_id": 3,
-            "name": "Team Ganesh"
-        },
-        {
-            "id": 2,
-            "tournament_id": 3,
-            "name": "Team Aditya"
-        },
-        {
-            "id": 3,
-            "tournament_id": 3,
-            "name": "Team Rakesh"
-        },
-        {
-            "id": 4,
-            "tournament_id": 3,
-            "name": "team Dixit"
-        },
-        {
-            "id": 5,
-            "tournament_id": 3,
-            "name": "Team Patil"
-        },
-        {
-            "id": 6,
-            "tournament_id": 3,
-            "name": "team adi"
-        },
-        {
-            "id": 7,
-            "tournament_id": 11,
-            "name": "team dixit"
-        },
-        {
-            "id": 8,
-            "tournament_id": 11,
-            "name": "team dev"
-        },
-        {
-            "id": 9,
-            "tournament_id": 11,
-            "name": "team sohil"
-        },
-        {
-            "id": 10,
-            "tournament_id": 11,
-            "name": "team adi"
-        },
-        {
-            "id": 11,
-            "tournament_id": 65,
-            "name": "team dixit"
-        },
-        {
-            "id": 12,
-            "tournament_id": 65,
-            "name": "team rajesh"
-        },
-        {
-            "id": 13,
-            "tournament_id": 65,
-            "name": "team sohil"
-        },
-        {
-            "id": 14,
-            "tournament_id": 65,
+            "tournament_id": 89,
             "name": "team tiwari"
         },
         {
-            "id": 15,
-            "tournament_id": 62,
-            "name": "V"
-        },
-        {
-            "id": 16,
-            "tournament_id": 62,
-            "name": "X"
-        },
-        {
-            "id": 17,
-            "tournament_id": 40,
-            "name": "Team Vitalik"
-        },
-        {
-            "id": 18,
-            "tournament_id": 40,
-            "name": "Team Satoshi"
-        }
-    ],
-    "stage": [
-        {
-            "id": 0,
-            "tournament_id": 62,
-            "name": "Race",
-            "type": "single_elimination",
-            "number": 1,
-            "settings": {
-                "grandFinal": "double",
-                "consolationFinal": false,
-                "matchesChildCount": 0,
-                "size": 2,
-                "seedOrdering": [
-                    "inner_outer"
-                ]
-            }
-        },
-        {
             "id": 1,
-            "tournament_id": 40,
-            "name": "testing",
-            "type": "single_elimination",
-            "number": 1,
-            "settings": {
-                "grandFinal": "double",
-                "consolationFinal": false,
-                "matchesChildCount": 0,
-                "size": 2,
-                "seedOrdering": [
-                    "inner_outer"
-                ]
-            }
-        }
-    ],
-    "group": [
-        {
-            "id": 0,
-            "stage_id": 0,
-            "number": 1
+            "tournament_id": 89,
+            "name": "team dixit"
         },
         {
-            "id": 1,
-            "stage_id": 1,
-            "number": 1
-        }
-    ],
-    "round": [
-        {
-            "id": 0,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 0
+            "id": 2,
+            "tournament_id": 89,
+            "name": "team dec"
         },
         {
-            "id": 1,
-            "number": 1,
-            "stage_id": 1,
-            "group_id": 1
+            "id": 3,
+            "tournament_id": 89,
+            "name": "team parmar"
         }
     ],
-    "match": [
-        {
-            "id": 0,
-            "number": 1,
-            "stage_id": 0,
-            "group_id": 0,
-            "round_id": 0,
-            "child_count": 0,
-            "status": 4,
-            "opponent1": {
-                "id": 15,
-                "position": 1,
-                "score": "1",
-                "result": "loss"
-            },
-            "opponent2": {
-                "id": 16,
-                "position": 2,
-                "score": "2",
-                "result": "win"
-            }
-        },
-        {
-            "id": 1,
-            "number": 1,
-            "stage_id": 1,
-            "group_id": 1,
-            "round_id": 1,
-            "child_count": 0,
-            "status": 2,
-            "opponent1": {
-                "id": 17,
-                "position": 1
-            },
-            "opponent2": {
-                "id": 18,
-                "position": 2
-            }
-        }
-    ],
+    "stage": [],
+    "group": [],
+    "round": [],
+    "match": [],
     "match_game": []
 }
