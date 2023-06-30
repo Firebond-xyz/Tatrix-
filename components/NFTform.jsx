@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs'
-import {useRouter} from 'next/router';
+import { BsArrowRight } from 'react-icons/bs'
+import { useRouter } from 'next/router';
 
 const NFTform = () => {
     const router = useRouter();
@@ -59,9 +59,9 @@ const NFTform = () => {
                         </div>
 
                         <button onClick={onFormSubmit}
-                            className="inline-flex p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Mint Event NFT
-                            <BsFillArrowRightCircleFill className="ml-3" />
+                            className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                            Mint NFT Event
+                            <BsArrowRight className='mt-1 ml-2' />
                         </button>
 
                         {/* <div className="mb-6">

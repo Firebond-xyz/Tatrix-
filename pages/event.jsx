@@ -21,7 +21,7 @@ export default function Event() {
 
                             </p>
                             <Link href="/explore"
-                                className="inline-flex align-left items-center relative text-lg px-8 py-3 bg-white  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                                className="inline-flex align-left items-center relative text-lg px-8 py-3 bg-white  mr-5 uppercase font-Agda font-bold text-b hover:bg-[#f0f0f0] cursor-pointer" >
                                 Already Created Your Event
                                 <BsArrowRight className=' ml-2' />
                             </Link>
@@ -30,7 +30,7 @@ export default function Event() {
                     </figure>
 
                     <figure className="flex flex-col items-center justify-center pt-10 ">
-                        <div className="text-center px-[50px] align-middle w-[600px] h-[600px] p-8 bg-[#202020] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div className="text-center px-[50px] align-middle w-[500px] h-[600px] p-8 bg-[#202020] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <Eventform />
                         </div>
                     </figure>
