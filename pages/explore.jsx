@@ -3,7 +3,6 @@ import Link from "next/link";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { BiHeart } from "react-icons/bi";
 
-
 const explore = () => {
   return (
     <div className="h-screen bg-black">
@@ -37,14 +36,14 @@ const explore = () => {
               <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
                 <figure>
                   <img
-                    src="/images/retro.png"
-                    alt="Retroverse Stream"
+                    src="/images/AptosTrends.png"
+                    alt="Gaming Trends on Aptos"
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">RetroVerse Stream</h2>
+                  <h2 className="card-title">Gaming Trends on Aptos</h2>
                   <div className="flex">
-                    <p>Retro Boys Club's Metaverse</p>
+                    <p>Check out Gaming trends on Aptos - 2023</p>
                     <div className="justify-end">
                       <BiHeart />
                     </div>
@@ -55,16 +54,21 @@ const explore = () => {
                 </div>
               </div>
               <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure>
+                <figure className="pt-4">
                   <img
-                    src="/images/umi.png"
+                    src="/images/howtoplayumi.jpeg"
                     alt="Umi's Friends Stream"
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Let's play Umi's Friends today😀</h2>
+                  <h2 className="card-title">
+                    Tutorial: How to play Umi's friends and setup account
+                  </h2>
                   <div className="flex">
-                    <p>Join us and win!</p>
+                    <p>
+                      Find out how to create an account in-game and tips for
+                      beginners,
+                    </p>
                     <div className="justify-end">
                       <BiHeart />
                     </div>
@@ -76,15 +80,16 @@ const explore = () => {
               </div>
               <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
                 <figure>
-                  <img
-                    src="/images/Cyberpet.png"
-                    alt="CyberPet"
-                  />
+                  <img src="/images/Cyberpet.png" alt="CyberPet" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">CyberPet Stream</h2>
+                  <h2 className="card-title">
+                    Update: CyberPet introduces new skins and much
+                    more!
+                  </h2>
                   <div className="flex">
-                    <p>join us and have fun!</p>
+                    <p>In the Latest update, CyberPet announces major changes in
+                      the game that you do not want to miss!</p>
                     <div className="justify-end">
                       <BiHeart />
                     </div>
@@ -100,14 +105,14 @@ const explore = () => {
               <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
                 <figure>
                   <img
-                    src="/images/retro.png"
-                    alt="Retroverse Stream"
+                    src="/images/AptosTrends.png"
+                    alt="Gaming Trends on Aptos"
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">RetroVerse Stream</h2>
+                  <h2 className="card-title">Gaming Trends on Aptos</h2>
                   <div className="flex">
-                    <p>Retro Boys Club's Metaverse</p>
+                    <p>Check out Gaming trends on Aptos - 2023</p>
                     <div className="justify-end">
                       <BiHeart />
                     </div>
@@ -118,16 +123,21 @@ const explore = () => {
                 </div>
               </div>
               <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
-                <figure className="p-3 pt-4">
+                <figure className="pt-4">
                   <img
-                    src="/images/umi.png"
+                    src="/images/howtoplayumi.jpeg"
                     alt="Umi's Friends Stream"
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Let's play Umi's Friends today😀</h2>
+                  <h2 className="card-title">
+                    Tutorial: How to play Umi's friends and setup account
+                  </h2>
                   <div className="flex">
-                    <p>Join us and win!</p>
+                    <p>
+                      Find out how to create an account in-game and tips for
+                      beginners,
+                    </p>
                     <div className="justify-end">
                       <BiHeart />
                     </div>
@@ -139,15 +149,18 @@ const explore = () => {
               </div>
               <div className="card card-compact mx-5 w-[400px] bg-base-100 shadow-xl">
                 <figure>
-                  <img
-                    src="/images/Cyberpet.png"
-                    alt="CyberPet"
-                  />
+                  <img src="/images/Cyberpet.png" alt="CyberPet" />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">CyberPet Stream</h2>
+                  <h2 className="card-title">
+                    Update: CyberPet introduces new skins and much
+                    more!
+                  </h2>
                   <div className="flex">
-                    <p>join us and have fun!</p>
+                    <p>
+                      In the Latest update, CyberPet announces major changes in
+                      the game that you do not want to miss!
+                    </p>
                     <div className="justify-end">
                       <BiHeart />
                     </div>
