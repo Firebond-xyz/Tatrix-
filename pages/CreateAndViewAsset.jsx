@@ -173,7 +173,7 @@ const Asset = () => {
             <p>Views: {metrics?.metrics?.[0]?.startViews}</p>
           )}
 
-          {video ? <p>{video.name}</p> : <p>Select a video file to upload.</p>}
+          {video ? <p>{video.name}</p> : <p className="text-white font-bold">Select a video file to upload.</p>}
 
           {progressFormatted && <p>{progressFormatted}</p>}
 
@@ -214,13 +214,13 @@ const Asset = () => {
         }
 
         .dropzone {
-          border: 2px dashed darkblue;
+          border: 2px dashed #98ee2c;
           padding: 20px;
           border-radius: 50%;
           width: 200px;
           height: 200px;
           display: flex;
-          flex-direction: column;
+          flex-direction: column;s
           justify-content: center;
           align-items: center;
           margin-bottom: 20px;
@@ -240,7 +240,7 @@ const Asset = () => {
         }
 
         .upload-button {
-          background-color: darkblue;
+          background-color: #98ee2c;
           color: white;
           margin-top: 10px;
           border-radius: 20px;
