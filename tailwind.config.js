@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Montserrat: ['Montserrat', 'sans-serif'],
+        Raleway: ['Raleway', 'sans-serif'],
+        Agda: ['Agdasima', 'sans-serif'],
+        Outfit: ['Outfit', 'sans-serif'],
+      }, //end of fontFamily
+    },
   },
   plugins: [require("daisyui")],
 }

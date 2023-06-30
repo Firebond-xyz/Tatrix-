@@ -29,8 +29,12 @@ export default function Navbar() {
       <Link href="/">
         <div className={style.logoContainer}>
           {/* <Image src={mantleSeaLogo} height={80} width={200} alt="mantle logo" /> */}
-          <div href="/" target={"_blank"} className="w-[100px] h-[50px] flex items-center">
-            <Image src="/images/logo.png" height={50} width={100}/>
+          <div
+            href="/"
+            target={"_blank"}
+            className="text-[32px] text-white font-serif"
+          >
+            TATRIX
           </div>
           <div className={style.logoText}></div>
         </div>
@@ -46,10 +50,10 @@ export default function Navbar() {
           type="text"
           value={searchQuery}
           placeholder="Enter Your Streaming ID"
-          //  onKeyPress={(e) => {
-          // if (e.key === 'Enter')
-          //     console.log(searchQuery)
-          // }}
+        //  onKeyPress={(e) => {
+        // if (e.key === 'Enter')
+        //     console.log(searchQuery)
+        // }}
         />
         <button
           onClick={() => {
@@ -81,15 +85,7 @@ export default function Navbar() {
         >
           Explore
         </div>
-        <div
-          className={style.headerItem}
-          onClick={() => {
-            router.push("/CreateAndViewAsset");
-          }}
-        >
-          {" "}
-          Video NFT
-        </div>
+        <div className={style.headerItem} onClick={() => { router.push('/CreateAndViewAsset') }}> Video NFT</div>
         <div
           className={style.headerItem}
           onClick={() => {
@@ -108,9 +104,9 @@ export default function Navbar() {
           <CgProfile />
         </div>
         <div className={style.headerIcon}>
-          <MdOutlineAccountBalanceWallet />
+
         </div>
-        <div>
+        <div className="flex  relative text-lg font-semibold px-10 py-3 bg-[#98ee2c] mr-5 text-black hover:bg-[#f0f0f0] cursor-pointer ">
           <Wallet />
         </div>
       </div>
