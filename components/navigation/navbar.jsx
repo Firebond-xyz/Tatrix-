@@ -14,15 +14,15 @@ const style = {
   logoText: ` ml-[0.8rem] text-white font-semibold text-2xl`,
   searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
   searchIcon: `text-[#8a939b] mx-3 font-bold text-lg`,
-  searchInput: `h-[2.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
-  headerItems: ` flex items-center align-right justify-end`,
-  headerItem: `text-white px-4 font-bold text-[#c8cacd] hover:text-white cursor-pointer`,
+  searchInput: `h-[2.6rem] font-Outfit font-light text-[12px] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b]`,
+  headerItems: ` font-Outfit font-light flex items-center align-right justify-end`,
+  headerItem: ` font-Outfit font-light text-white px-4 font-bold font-Outfit text-[#c8cacd] hover:text-white cursor-pointer`,
   headerIcon: `text-[#8a939b] text-3xl font-black px-4 hover:text-white cursor-pointer`,
 };
 
 export default function Navbar() {
   const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("Enter Your Streaming ID");
 
   return (
     <div className={style.wrapper}>
@@ -49,7 +49,6 @@ export default function Navbar() {
           className={style.searchInput}
           type="text"
           value={searchQuery}
-          placeholder="Enter Your Streaming ID"
         //  onKeyPress={(e) => {
         // if (e.key === 'Enter')
         //     console.log(searchQuery)
@@ -59,7 +58,7 @@ export default function Navbar() {
           onClick={() => {
             router.push(`/streaming/${searchQuery}`);
           }}
-          className="text-white px-2"
+          className="px-2 text-[#98ee2c] font-Outfit text-[14px] font-bold"
         >
           Search
         </button>
@@ -94,6 +93,7 @@ export default function Navbar() {
         >
           Tournaments
         </div>
+
         {/* <div className={style.headerIcon} onClick={() => { router.push(`/profile/${address}`) }}> */}
         <div
           className={style.headerIcon}
@@ -106,7 +106,7 @@ export default function Navbar() {
         <div className={style.headerIcon}>
 
         </div>
-        <div className="flex  relative text-lg font-semibold px-10 py-3 bg-[#98ee2c] mr-5 text-black hover:bg-[#f0f0f0] cursor-pointer ">
+        <div className="flex relative text-lg font-semibold px-10 py-3 bg-[#98ee2c] mr-5 text-black hover:bg-[#f0f0f0] cursor-pointer ">
           <Wallet />
         </div>
       </div>

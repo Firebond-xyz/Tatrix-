@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useRouter } from "next/router";
@@ -38,7 +38,7 @@ const Eventform = () => {
 
   const Submit = async (event) => {
     event.preventDefault();
-    
+
     try {
       console.log(eventName);
       const response = await fetch("/api/stream/createStream", {
@@ -80,10 +80,9 @@ const Eventform = () => {
   return (
     <div>
       {/* create event form  */}
-      <div className="flex flex-col items-center justify-center">
         <div className="w-full pt-5 max-w-lg">
           <form>
-            <div className=" flex flex-col text-left mb-6">
+            <div className="flex justify-end flex-col text-left mb-6">
               <label
                 htmlFor="text"
                 className=" mb-2 text-lg font-medium text-white dark:text-white"
@@ -156,15 +155,13 @@ const Eventform = () => {
 
             <button
               onClick={Submit}
-              className="inline-flex p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              List Your Event
-              <BsFillArrowRightCircleFill className="ml-3" />
+              className="flex justify-start relative text-lg px-8 py-3 bg-[#98ee2c]  mr-5 uppercase font-Agda font-bold text-black hover:bg-[#f0f0f0] cursor-pointer" >
+                List Your Event 
+              <BsArrowRight className=' ml-2' />
             </button>
           </form>
         </div>
       </div>
-    </div>
   );
 };
 
