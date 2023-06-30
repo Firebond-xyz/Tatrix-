@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Player } from "@livepeer/react";
-import logo from "../public/images/godOfWar.jpg";
+import logo from "../public/images/Cyberpet.png";
 import { useRouter } from "next/router";
 
 export default function Streams() {
@@ -55,7 +55,7 @@ export default function Streams() {
               ) : (
                 <Image
                   src={logo}
-                  alt="Livepeer Studio Logo"
+                  alt="Cover Photo"
                   width="400"
                   height="400"
                   className="p-3"
