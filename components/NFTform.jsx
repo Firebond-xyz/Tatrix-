@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
+import {useRouter} from 'next/router';
 
 const NFTform = () => {
+    const router = useRouter();
     const [nftName, setNftName] = useState('');
     const [nftDescription, setNftDescription] = useState('');
     const [nftImage, setNftImage] = useState('');
@@ -9,10 +11,8 @@ const NFTform = () => {
     const [nftAmount, setNftAmount] = useState('');
 
     const onFormSubmit = async (event) => {
+        window.my_modal_3.showModal();
         event.preventDefault();
-        setError(false);
-        setSuccess(false);
-        console.log("Owner Wallet", ownerWallet)
     }
 
     const nameHandler = (event) => {
@@ -58,7 +58,8 @@ const NFTform = () => {
                             <input type="number" id="input-name" onChange={priceHandler} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="0.1 APT" required />
                         </div>
 
-                        <button className="inline-flex p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <button onClick={onFormSubmit}
+                            className="inline-flex p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Mint Event NFT
                             <BsFillArrowRightCircleFill className="ml-3" />
                         </button>
@@ -83,6 +84,14 @@ const NFTform = () => {
                             Send
                         </button> */}
                     </form>
+
+                    <dialog id="my_modal_3" className="modal">
+                        <form method="dialog" className="modal-box">
+                            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => { router.push('/event') }} >✕</button>
+                            <h3 className="font-bold text-lg">🎉 Tatrix NFT Minted 🎉</h3>
+                            <p className="py-4">Create Your NFT Based Event Now</p>
+                        </form>
+                    </dialog>
 
                 </div>
             </div>

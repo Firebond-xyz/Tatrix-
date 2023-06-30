@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 const style = {
   wrapper: `relative`,
@@ -32,14 +33,17 @@ const Hero = () => {
             <div className={style.title}>
               Stream & Organize Games on the Aptos Blockchain
             </div>
-
-                        <div className={style.ctaContainer}>
-                            <button className={style.accentedButton}>Explore</button>
-                            <button className={style.button}>Stream</button>
-                        </div>
-                    </div>
-                    <div className={style.cardContainer}>
-                        {/* <img
+            <div className={style.ctaContainer}>
+              <Link href="/explore">
+                <button className={style.accentedButton} >Explore</button>
+              </Link>
+              <Link href="/nft">
+                <button className={style.button}>Create Stream</button>
+              </Link>
+            </div>
+          </div>
+          <div className={style.cardContainer}>
+            {/* <img
                             className="rounded-t-lg"
                             src="https://media.istockphoto.com/id/1297564630/vector/game-dev-isometric-concept-education-of-creation-3d-design-of-location-or-level-computer.jpg?s=612x612&w=0&k=20&c=NuOH1Hfd3Y-DJtqwc9bafZEjrifMs47rdr4Zw1nGV3g="
                             alt=""
