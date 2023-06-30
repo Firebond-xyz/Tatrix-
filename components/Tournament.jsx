@@ -10,6 +10,34 @@ const Tournament = () => {
   const [teamNames, setTeamNames] = useState("");
   const router = useRouter();
 
+  // useEffect(() => {
+  //   async function delete() {
+
+  //     try {
+  //       const tournamentId = localStorage.getItem("TournId");
+  //       console.log(tournamentId);
+  //       const response = await fetch("/api/delete", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           tournamentId,
+  //         }),
+  //       });
+
+  //       if (response.ok) {
+  //         console.log("tournament deleted successfully!");
+  //         router.push("/thankyou");
+  //       } else {
+  //         console.log("failed to delete data!");
+  //       }
+  //     } catch (error) {
+  //       console.log("Failed to delete tournament:", error);
+  //     }
+  //   };
+  // }, []);
+
   const tournamentNameHandler = (event) => {
     setTournamentName(event.target.value);
   };
