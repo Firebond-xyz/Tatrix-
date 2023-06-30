@@ -29,12 +29,8 @@ export default function Navbar() {
       <Link href="/">
         <div className={style.logoContainer}>
           {/* <Image src={mantleSeaLogo} height={80} width={200} alt="mantle logo" /> */}
-          <div
-            href="/"
-            target={"_blank"}
-            className="text-[32px] text-white font-serif"
-          >
-            TATRIX
+          <div href="/" target={"_blank"} className="w-[100px] h-[50px] flex items-center">
+            <Image src="/images/logo.png" height={50} width={100}/>
           </div>
           <div className={style.logoText}></div>
         </div>
@@ -85,7 +81,15 @@ export default function Navbar() {
         >
           Explore
         </div>
-        <div className={style.headerItem} onClick={() => { router.push('/CreateAndViewAsset') }}> Video NFT</div>
+        <div
+          className={style.headerItem}
+          onClick={() => {
+            router.push("/CreateAndViewAsset");
+          }}
+        >
+          {" "}
+          Video NFT
+        </div>
         <div
           className={style.headerItem}
           onClick={() => {
