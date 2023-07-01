@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-<img src="https://uploads-ssl.webflow.com/6458f7b5632c534c43d7bf2f/645b6ad92c2a7120c874ff53_FIREBOND2x.png"></a>
+<img src= "https://github.com/Firebond-xyz/Tatrix-/assets/100551659/2679f6fc-7740-4490-9b2c-edc56e00fbf9"></a>
   
                      Tatrix :  A Web3 Game Streaming and Community Tournament Platform 
 
