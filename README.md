@@ -34,6 +34,11 @@ The next evolutionary step is towards the Gamefi streaming platform. Create a su
 We empower streamers by eliminating high commission rates, eradicating arbitrary increases imposed solely by the company, significantly reducing holding periods for funds, providing clear and concise guidelines regarding account bans based on legal matters, ensuring complete transparency, and fostering a strong sense of community consensus. By doing so, we restore the integrity of the streaming ecosystem and bolster the invaluable influence and support that streamers have diligently cultivated to achieve remarkable success.
 
 
+ ## Demo <a name = "demo"></a>
+
+Demo Video : https://www.loom.com/share/d7dce9991c364f6fa4b7b36bab4ccb20
+
+
 
 
 
